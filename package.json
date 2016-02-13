@@ -1,0 +1,33 @@
+{
+  "name": "cohorton",
+  "version": "0.0.1",
+  "description": "Node and MongoDB cohort analysis framework",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/drei01/cohorton.git"
+  },
+  "keywords": [
+    "node",
+    "cohorts"
+  ],
+  "author": "Matthew Reid",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/drei01/cohorton/issues"
+  },
+  "homepage": "https://github.com/drei01/cohorton#readme",
+  "dependencies": {
+    "body-parser": "^1.15.0",
+    "ejs": "^2.4.1",
+    "express": "^4.13.4",
+    "express-validator": "^2.19.1",
+    "fs": "0.0.2",
+    "moment": "^2.11.2",
+    "mongoose": "^4.4.0",
+    "morgan": "^1.6.1"
+  }
+}

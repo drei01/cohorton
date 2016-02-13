@@ -52,7 +52,7 @@ app.get('/data', function(req, res, next) {
 
   Event.aggregate([
             { $match: {
-                    'created_at': {
+                    'user_joined_at': {
                                 $gt: moment().subtract(req.query.days || 7, 'days').toDate(),
                                 $lt: moment().toDate()
                             }

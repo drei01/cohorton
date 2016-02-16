@@ -27,7 +27,7 @@ app.get('/event', function(req, res, next) {
   }
 	
   var event = new Event();
-  event.user_id = req.query.userId;
+  event.user_id = req.query.user_id;
   event.user_joined_at = req.query.user_joined_at;
   event.event = req.query.event;
   event.via = req.query.via;

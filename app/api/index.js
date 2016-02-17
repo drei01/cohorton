@@ -21,9 +21,9 @@ app.set('view engine', 'ejs');
 * Send a new cohort event
 */
 app.get('/event', function(req, res, next) {
-  if (!req.query.user_id || !req.query.event || !req.query.info || !req.query.user_joined_at || !req.query.via){
+  if (!req.query.user_id || !req.query.event || !req.query.user_joined_at || !req.query.via){
     res.status(400);//bad request
-    return res.json({'error':'You must provide an userId, event, info, user_joined_at and via parameters'});
+    return res.json({'error':'You must provide an user_id, event, user_joined_at and via parameters'});
   }
 	
   var event = new Event();
@@ -31,7 +31,9 @@ app.get('/event', function(req, res, next) {
   event.user_joined_at = req.query.user_joined_at;
   event.event = req.query.event;
   event.via = req.query.via;
-  event.info = JSON.parse(req.query.info);
+  if(req.query.info){
+    event.info = JSON.parse(req.query.info);   
+  }
 	  
   event.save(function(err) {
       console.log(err);

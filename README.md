@@ -20,12 +20,13 @@ By default the server runs on port **7878**
 
 ## Example
 A simple **GET** request is all that is needed to track an event
-####Tracking an event
+
+#### Tracking an event
 ```
 curl http://localhost:7878/event?user_id=USER_ID&event=EVENT_TYPE&user_joined_at=EPOCH_DATE&via=REFERRER&info=JSON_DATA_OPTIONAL
 ```
 
-####Retrieving metrics
+#### Retrieving metrics
 Metrics can be received in json or html format for the specified number of days
 ```
 curl http://localhost:7878/data?days=7&format=json|html
@@ -33,16 +34,16 @@ curl http://localhost:7878/data?days=7&format=json|html
 
 ## API Reference
 
-###/event
-####Params
+### /event
+#### Params
     user_id - (string) unique id for the user
     event - (string) name of the event to track
     user_joined_at - (epoch) join date for the user, used for tracking cohorts
     via - (string) referrer for this event (useful for tracking metrics across different client applications) 
     info - (json) Any additional data to be recorded with this event (i.e test variant)
 
-###/data
-####Params
+### /data
+#### Params
     days - (number) Number of days previous to today to return results for *user_joined_at*
     format - (json|html) Format of the returned data 
 

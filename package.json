@@ -27,7 +27,7 @@
     "express-validator": "^6.0.0",
     "fs": "0.0.2",
     "moment": "^2.11.2",
-    "mongoose": "^5.0.0",
+    "mongoose": "^6.0.0",
     "morgan": "^1.6.1"
   }
 }
